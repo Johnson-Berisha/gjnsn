@@ -5,7 +5,7 @@ export default function Home() {
     <div className="container measure">
       <header>
         <div class="logo">Johnson Berisha</div>
-        <nav>
+        <nav aria-label="Main navigation">
           <Link href="#">Work</Link>
           <Link href="#">About</Link>
           <Link href="#">Notes</Link>
@@ -16,6 +16,7 @@ export default function Home() {
         <p className="hero-sub">Currently based in Kosovo. Focusing on beautiful UI and interactive UX.</p>
       </section>
       <section>
+        <h2 className="visuallyHidden">Projects</h2>
         <div className="project-list">
           <a href="#" className="project-item">
             <span className="project-title">Fontiq</span>
