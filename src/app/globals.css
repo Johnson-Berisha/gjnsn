@@ -26,6 +26,7 @@
   --space-sm: 0.5rem;
   --space-md: 1rem;
   --space-lg: 1.5rem;
+  --spacing: 2rem;
 }
 
 *,
@@ -121,6 +122,12 @@ p {
   color: var(--color-text);
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 small,
 .caption {
   font-size: var(--type-xxs);
@@ -136,13 +143,13 @@ small,
 /* container */
 
 .container {
-  max-width: 900px;
+  /* max-width: 900px; */
   margin: 0 auto;
   padding: calc(var(--spacing) * 2);
 }
 
 .measure {
-  max-width: 60ch;
+  max-width: 900px;
 }
 
 /* responsivenesss */
@@ -155,4 +162,35 @@ small,
   h1 {
     font-size: clamp(1.75rem, calc(1.6rem + 2.2vw), 2.25rem);
   }
+}
+
+/* actual website */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: calc(var(--spacing) * 4);
+}
+
+header .logo {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+header nav {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+header nav a {
+  font-size: var(--type-sm);
+  font-weight: 500;
+  color: var(--color-muted);
+  transition: .2s;
+}
+
+header nav a:hover {
+  transform: translateY(-2px);
+  color: var(--color-text);
 }
