@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <div>
-      <h1>gjnsn</h1>
+    <div className="container measure">
+      <h1>Gjonson Berisha</h1>
     </div>
   );
 }
