@@ -12,9 +12,38 @@ export default function Home() {
         </nav>
       </header>
       <section className="hero">
-        <h1>Web Developer crafting digital experiences with clarity and purpose.</h1>
-        <p className="hero-sub">Currently based in Kosovo. Focusing on beautiful UI and UX.</p>
+        <h1>Web developer crafting digital experiences with clarity and purpose.</h1>
+        <p className="hero-sub">Currently based in Kosovo. Focusing on beautiful UI and interactive UX.</p>
       </section>
+      <section>
+        <div className="project-list">
+          <a href="#" className="project-item">
+            <span className="project-title">Fontiq</span>
+            <div className="project-meta">
+              <span>Founder</span>
+              <span>2026</span>
+            </div>
+          </a>
+          <a href="#" className="project-item">
+            <span className="project-title">MPDPlayer</span>
+            <div className="project-meta">
+              <span>Development</span>
+              <span>2025</span>
+            </div>
+          </a>
+          <a href="#" className="project-item">
+            <span className="project-title">Berisha AL</span>
+            <div className="project-meta">
+              <span>Website</span>
+              <span>2023</span>
+            </div>
+          </a>
+        </div>
+      </section>
+      <footer>
+        <span>&copy; 2026</span>
+        <Link href={"#"}>Get in touch</Link>
+      </footer>
     </div>
   );
 }
