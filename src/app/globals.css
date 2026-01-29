@@ -115,9 +115,11 @@ h3 {
 
 h4 {
   margin: 0 0 var(--space-sm) 0;
-  font-weight: 300;
-  font-size: var(--type-lg);
+  font-weight: 700;
+  font-size: var(--type-sm);
   line-height: 1.25;
+  font-family: var(--font-mono);
+  color: var(--color-muted);
 }
 
 p {
@@ -257,6 +259,53 @@ header nav a:hover {
     justify-content: space-between;
     gap: 0;
   }
+}
+
+/* about */
+.about {
+  margin-top: calc(var(--spacing) * 6);
+  display: flex;
+  gap: calc(var(--spacing) * 3);
+}
+
+.about-service p {
+  font-family: var(--font-mono);
+  font-size: .9rem;
+}
+
+.languages {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.language {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 100, 180, 0.06), rgba(100, 200, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--color-muted);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+}
+
+.language::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-muted);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.22);
 }
 
 /* footer */

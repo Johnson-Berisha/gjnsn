@@ -77,6 +77,24 @@ export default function Home() {
             </a>
           </div>
         </section>
+        <section className="about">
+          <div className="about-content">
+            <h4 className="about-title">ABOUT</h4>
+            <p>I believe that good design is as little design as possible. My approach is rooted in clarity, functionality, and timeless aesthetics.</p>
+            <p>Over the last five years, I've partnered with startups and established brands to strip away the noise and focus on what truly matters to the user.</p>
+          </div>
+          <div className="about-service">
+            <h4 className="about-title">SERVICES</h4>
+            <p>UI/UX Design, Creative Direction, Rapid Prototyping, Frontend Development.</p>
+            <h4 className="about-title">SKILLS</h4>
+            <div className="languages">
+              <span className="language">HTML</span>
+              <span className="language">CSS</span>
+              <span className="language">JAVASCRIPT</span>
+              <span className="language">NEXTJS</span>
+            </div>
+          </div>
+        </section>
       </main>
       <footer>
         <span>&copy; 2026</span>
