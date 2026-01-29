@@ -251,6 +251,12 @@ header nav a:hover {
   }
 }
 
+@media (max-width: 800px) {
+  .blob {
+    right: 10px;
+  }
+}
+
 /* projects */
 
 .project-list {
@@ -331,7 +337,6 @@ header nav a:hover {
   gap: 0.5rem;
   padding: 0.28rem 0.6rem;
   border-radius: 999px;
-  background: linear-gradient(90deg, rgba(255, 100, 180, 0.06), rgba(100, 200, 255, 0.03));
   border: 1px solid rgba(255, 255, 255, 0.06);
   color: var(--color-muted);
   font-family: var(--font-mono);
@@ -350,6 +355,13 @@ header nav a:hover {
   border-radius: 50%;
   background: var(--color-muted);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.22);
+}
+
+@media (max-width: 700px) {
+  .about {
+    flex-direction: column;
+    gap: calc(var(--spacing) / 1.5)
+  }
 }
 
 /* footer */
