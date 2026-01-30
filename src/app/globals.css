@@ -391,6 +391,10 @@ header nav a:hover {
     flex-direction: column;
     gap: calc(var(--spacing) / 1.5)
   }
+
+  .about-service {
+    width: 100%;
+  }
 }
 
 /* footer */
