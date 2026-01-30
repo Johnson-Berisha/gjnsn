@@ -163,6 +163,7 @@ small,
 @media (max-width: 420px) {
   .container {
     margin: 1.5rem auto;
+    padding: var(--spacing);
   }
 }
 
@@ -207,6 +208,26 @@ header nav a:hover {
   margin-top: var(--spacing);
   color: var(--color-muted);
   width: 400px;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    /* gap: calc(var(--spacing) / 2); */
+  }
+
+  h1 {
+    max-width: 100%;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .hero-sub {
+    width: 100%;
+  }
 }
 
 /* blob */
