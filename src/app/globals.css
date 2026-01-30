@@ -339,6 +339,14 @@ header nav a:hover {
   gap: calc(var(--spacing) * 3);
 }
 
+.about-content {
+  width: 100%;
+}
+
+.about-service {
+  width: 60%;
+}
+
 .about-service p {
   font-family: var(--font-mono);
   font-size: .9rem;

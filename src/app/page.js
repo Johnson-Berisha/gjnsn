@@ -53,8 +53,9 @@ export default function Home() {
         <section className="about" id="about">
           <div className="about-content">
             <h4 className="about-title">ABOUT</h4>
+            <p>Creative web developer focused on modern CSS, responsive design, and clean, high-performance user interfaces. Passionate about building fast, polished websites and constantly improving my craft.</p>
+            <h4 className="about-title">PHILOSOPHY</h4>
             <p>I believe that good design is as little design as possible. My approach is rooted in clarity, functionality, and timeless aesthetics.</p>
-            <p>Over the last five years, I've partnered with startups and established brands to strip away the noise and focus on what truly matters to the user.</p>
           </div>
           <div className="about-service">
             <h4 className="about-title">SERVICES</h4>
@@ -65,6 +66,9 @@ export default function Home() {
               <span className="language">CSS</span>
               <span className="language">JAVASCRIPT</span>
               <span className="language">NEXTJS</span>
+              <span className="language">Figma</span>
+              <span className="language">GSAP</span>
+              <span className="language">LenisJS</span>
             </div>
           </div>
         </section>
