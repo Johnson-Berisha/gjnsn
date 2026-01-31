@@ -8,7 +8,6 @@ export default function Home() {
 
   return (
     <div className="container measure">
-      <div className="dev">DEV</div>
       <header>
         <div className="logo">Johnson Berisha</div>
         <nav aria-label="Main navigation">
