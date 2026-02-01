@@ -72,6 +72,12 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section className="contact">
+          <h2 className="contact-title">LET'S WORK TOGETHER</h2>
+          <p className="contact-sub">I'm currently available for freelance projects and collaborations. Feel free to reach out!</p>
+          <span className="language">gjonsonberisha@gmail.com</span>
+          <span className="language">048 711 544</span>
+        </section>
       </main>
       <footer>
         <span>&copy; 2026</span>
