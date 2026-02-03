@@ -48,7 +48,7 @@ html {
   color: var(--color-text);
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
-  scrollbar-gutter: stable both-edges;
+  /* scrollbar-gutter: stable both-edges; */
   padding-right: 6px;
 }
 
@@ -397,6 +397,70 @@ header nav a:hover {
 
   .about-service {
     width: 100%;
+  }
+}
+
+/* modal styles */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 6, 23, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.modal {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  max-width: 720px;
+  width: 100%;
+  color: var(--color-text);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.modal h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: var(--type-xl);
+}
+
+.modal .project-meta {
+  margin-bottom: 0.75rem;
+}
+
+.modal p {
+  color: var(--color-muted);
+  margin-bottom: 0;
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  color: var(--color-muted);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.modal-close:hover {
+  color: var(--color-text);
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .modal {
+    padding: 1rem;
+    border-radius: 10px;
   }
 }
 

@@ -1,10 +1,37 @@
 "use client";
 
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function Home() {
 
+  const [modalOpen, setModalOpen] = useState(false);
+  const [activeProject, setActiveProject] = useState(null);
 
+  const projects = [
+    { id: 'fontiq', title: 'Fontiq', role: 'Founder', year: '2026', description: 'A type-focused project I founded to explore variable fonts and web typography.' },
+    { id: 'mpdplayer', title: 'MPDPlayer', role: 'Development', year: '2025', description: 'A lightweight music player frontend for MPD with a focus on responsive UI.' },
+    { id: 'berisha', title: 'Berisha AL', role: 'Website', year: '2023', description: 'A portfolio and informational website built with modern CSS and accessible markup.' }
+  ];
+
+  function openModal(project) {
+    setActiveProject(project);
+    setModalOpen(true);
+  }
+
+  function closeModal() {
+    setModalOpen(false);
+    setActiveProject(null);
+  }
+
+  useEffect(() => {
+    if (!modalOpen) return;
+    function onKey(e) {
+      if (e.key === "Escape") closeModal();
+    }
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [modalOpen]);
 
   return (
     <div className="container measure">
@@ -28,29 +55,38 @@ export default function Home() {
         <section className="projects" id="work">
           <h2 className="visuallyHidden">Projects</h2>
           <div className="project-list">
-            <a href="#" className="project-item">
-              <span className="project-title">Fontiq</span>
-              <div className="project-meta">
-                <span>Founder</span>
-                <span>2026</span>
-              </div>
-            </a>
-            <a href="#" className="project-item">
-              <span className="project-title">MPDPlayer</span>
-              <div className="project-meta">
-                <span>Development</span>
-                <span>2025</span>
-              </div>
-            </a>
-            <a href="#" className="project-item">
-              <span className="project-title">Berisha AL</span>
-              <div className="project-meta">
-                <span>Website</span>
-                <span>2023</span>
-              </div>
-            </a>
+            {projects.map((p) => (
+              <a
+                href="#"
+                key={p.id}
+                className="project-item"
+                onClick={(e) => {
+                  e.preventDefault();
+                  openModal(p);
+                }}
+              >
+                <span className="project-title">{p.title}</span>
+                <div className="project-meta">
+                  <span>{p.role}</span>
+                  <span>{p.year}</span>
+                </div>
+              </a>
+            ))}
           </div>
         </section>
+        {modalOpen && (
+          <div className="modal-overlay" onClick={closeModal}>
+            <div className="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" onClick={(e) => e.stopPropagation()}>
+              <button className="modal-close" onClick={closeModal} aria-label="Close">×</button>
+              <h3 id="modal-title">{activeProject?.title}</h3>
+              <div className="project-meta">
+                <span>{activeProject?.role}</span>
+                <span>{activeProject?.year}</span>
+              </div>
+              <p>{activeProject?.description}</p>
+            </div>
+          </div>
+        )}
         <section className="about" id="about">
           <div className="about-content">
             <h4 className="about-title">ABOUT</h4>
