@@ -13,6 +13,7 @@ export default function Home() {
         <nav aria-label="Main navigation">
           <Link href="#work">Work</Link>
           <Link href="#about">About</Link>
+          <Link href="#contact">Contact</Link>
         </nav>
       </header>
       <main>
@@ -72,7 +73,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="contact">
+        <section className="contact" id="contact">
           <h2 className="contact-title">LET'S WORK TOGETHER</h2>
           <p className="contact-sub">I'm currently available for freelance projects and collaborations. Feel free to reach out!</p>
           <span className="language">gjonsonberisha@gmail.com</span>
@@ -81,7 +82,7 @@ export default function Home() {
       </main>
       <footer>
         <span>&copy; 2026</span>
-        <Link href={"#"}>Get in touch</Link>
+        <Link href={"#contact"}>Get in touch</Link>
       </footer>
     </div>
   );

@@ -47,6 +47,7 @@ html {
   background: var(--color-bg);
   color: var(--color-text);
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
   scrollbar-gutter: stable both-edges;
   padding-right: 6px;
 }
