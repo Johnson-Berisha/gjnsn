@@ -9,7 +9,7 @@ export default function Home() {
   const [activeProject, setActiveProject] = useState(null);
 
   const projects = [
-    { id: 'fontiq', title: 'Fontiq', role: 'Founder', year: '2026', description: 'A type-focused project I founded to explore variable fonts and web typography.' },
+    { id: 'fontiq', title: 'Fontiq', role: 'Founder', year: '2026', description: `Fontiq is a typography guide for the modern web developer.`, description: `It also has a built-in app called Code Snippets, that are copy - paste ready snippets for React and plain HTML / CSS. Optimized for performance and zero Layout Shift, and you can use the snippets anytime for free!` },
     { id: 'mpdplayer', title: 'MPDPlayer', role: 'Development', year: '2025', description: 'A lightweight music player frontend for MPD with a focus on responsive UI.' },
     { id: 'berisha', title: 'Berisha AL', role: 'Website', year: '2023', description: 'A portfolio and informational website built with modern CSS and accessible markup.' }
   ];
@@ -78,10 +78,12 @@ export default function Home() {
           <div className="modal-overlay" onClick={closeModal}>
             <div className="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" onClick={(e) => e.stopPropagation()}>
               <button className="modal-close" onClick={closeModal} aria-label="Close">×</button>
-              <h3 id="modal-title">{activeProject?.title}</h3>
-              <div className="project-meta">
-                <span>{activeProject?.role}</span>
-                <span>{activeProject?.year}</span>
+              <div className="project-header">
+                <h3 id="modal-title">{activeProject?.title}</h3>
+                <div className="project-meta">
+                  <span>{activeProject?.role}</span>
+                  <span>{activeProject?.year}</span>
+                </div>
               </div>
               <p>{activeProject?.description}</p>
             </div>

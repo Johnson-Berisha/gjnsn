@@ -408,35 +408,37 @@ header nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(2, 6, 23, 0.6);
+  background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(4px);
   z-index: 1000;
   padding: 2rem;
 }
 
 .modal {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  background-color: hsl(240, 5%, 8%);
   border: 1px solid rgba(255, 255, 255, 0.06);
   padding: 1.25rem 1.5rem;
   border-radius: 12px;
-  max-width: 720px;
+  max-width: 420px;
   width: 100%;
   color: var(--color-text);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
   position: relative;
 }
 
+
 .modal h3 {
-  margin: 0 0 0.5rem 0;
-  font-size: var(--type-xl);
+  margin: 0;
+  font-size: var(--type-lg);
+  font-family: var(--font-mono);
+  font-weight: bold;
 }
 
 .modal .project-meta {
   margin-bottom: 0.75rem;
+  gap: 1rem;
 }
 
 .modal p {
-  color: var(--color-muted);
   margin-bottom: 0;
 }
 
